@@ -20,9 +20,10 @@ def getList():
     for anchor in soup.find_all('a', {"class" : "__venue-name"}):
         item = anchor.contents[1].contents[0]
         l.append(item)
-        print item
 
     return l
 
 if __name__ == "__main__":
-    getList()
+    l = getList()
+    for i in l:
+        print i
